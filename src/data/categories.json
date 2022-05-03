@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Development",
+    "imageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+    "route": "courses/development"
+  },
+  {
+    "id": 2,
+    "title": "Design",
+    "imageUrl": "https://images.unsplash.com/photo-1587440871875-191322ee64b0",
+    "route": "courses/design"
+  },
+  {
+    "id": 3,
+    "title": "Marketing",
+    "imageUrl": "https://images.unsplash.com/photo-1533750349088-cd871a92f312",
+    "route": "courses/marketing"
+  },
+  {
+    "id": 4,
+    "title": "Business",
+    "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+    "route": "courses/business"
+  },
+  {
+    "id": 5,
+    "title": "IT & Software",
+    "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+    "route": "courses/it%20&%20software"
+  }
+]
