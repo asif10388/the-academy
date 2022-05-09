@@ -1,4 +1,4 @@
-import { useState, createContext, useEffect } from "react";
+import { useState, createContext, useEffect, useReducer } from "react";
 
 const addItem = (cartItems, itemToAdd) => {
   const existing = cartItems.find((item) => item.id === itemToAdd.id);
@@ -7,6 +7,24 @@ const addItem = (cartItems, itemToAdd) => {
     return cartItems.map((item) => (item.id === itemToAdd.id ? { ...item, quantity: item.quantity + 1 } : item));
   }
   return [...cartItems, { ...itemToAdd, quantity: 1 }];
+};
+
+export const CART_ACTION_TYPES = {
+  ADD_ITEM_TO_CART: "ADD_ITEM_TO_CART",
+  REMOVE_ITEM_FROM_CART: "REMOVE_ITEM_FROM_CART",
+};
+
+export const cartReducer = (state, action) => {
+  const { type, payload } = action;
+
+  switch (type) {
+    case CART_ACTION_TYPES.ADD_ITEM_TO_CART:
+      return {};
+    case CART_ACTION_TYPES.REMOVE_ITEM_FROM_CART:
+      return {};
+    default:
+      throw new Error(`Invalid action type: ${type}`);
+  }
 };
 
 export const CartContext = createContext({

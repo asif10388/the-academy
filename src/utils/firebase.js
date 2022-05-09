@@ -77,15 +77,12 @@ export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => 
   });
 
   await batch.commit();
-
-  console.log("collection and documents added");
 };
 
 export const getCategoriesAndDocuments = async () => {
   const collectionRef = collection(db, "categories");
 
   const q = query(collectionRef);
-  console.log(q);
 
   const querySnapshot = await getDocs(q);
 
@@ -95,8 +92,6 @@ export const getCategoriesAndDocuments = async () => {
 
     return acc;
   }, {});
-
-  console.log(querySnapshot.docs.data);
 
   return categoryMap;
 };
